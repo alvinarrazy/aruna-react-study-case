@@ -148,13 +148,13 @@ function App() {
                         <InputGroup>
                           <InputGroup.Text
                             data-testid={`${dataTestIdConst.NUMBER_LABEL}-${n.label}`}
-                            style={{ width: '80%', display: 'flex', justifyContent: 'center' }}
+                            style={{ width: '50%', display: 'flex', justifyContent: 'center' }}
                           >
                             {n.label}
                           </InputGroup.Text>
                           <Button
                             variant={chosenNumbers.includes(n.value) ? "success" : "danger"}
-                            onClick={() => handleChangeNumbers(n.value)} style={{ width: '20%' }}
+                            onClick={() => handleChangeNumbers(n.value)} style={{ width: '50%' }}
                             data-testid={`${dataTestIdConst.NUMBER_BUTTON}-${n.label}`}
                           >
                             {chosenNumbers.includes(n.value) ? "✓" : "X"}
