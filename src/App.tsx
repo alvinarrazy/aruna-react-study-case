@@ -55,7 +55,7 @@ function App() {
 
   function handleResultBox() {
     //Handle error if chosen numbers are less than 2
-    if (operator && chosenNumbers.length < 2) return 'Error: assign more than two numbers for the operator to process'
+    if (operator && chosenNumbers.length < 2) return 'Error: assign more than one number for the operator to process'
 
     let string = ''
     let operatorString = ` ${operator ?? '...'} `

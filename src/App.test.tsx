@@ -55,13 +55,13 @@ test('Operator only', () => {
     let button = screen.getByTestId(`${dataTestIdConst.OPERATOR}-${o}`)
 
     //Before clicked
-    expect(resultBox).not.toHaveTextContent('Error: assign more than two numbers for the operator to process')
+    expect(resultBox).not.toHaveTextContent('Error: assign more than one number for the operator to process')
     //First click
     fireEvent.click(button)
-    expect(resultBox).toHaveTextContent('Error: assign more than two numbers for the operator to process')
+    expect(resultBox).toHaveTextContent('Error: assign more than one number for the operator to process')
     //Second click
     fireEvent.click(button)
-    expect(resultBox).not.toHaveTextContent('Error: assign more than two numbers for the operator to process')
+    expect(resultBox).not.toHaveTextContent('Error: assign more than one number for the operator to process')
   }
 });
 
@@ -149,11 +149,11 @@ test('1 number with an operator', () => {
 
       //First click assigning 1 number with the operator
       fireEvent.click(button)
-      expect(resultBox).toHaveTextContent('Error: assign more than two numbers for the operator to process')
+      expect(resultBox).toHaveTextContent('Error: assign more than one number for the operator to process')
       expect(button).toHaveTextContent('✓')
       //Second click assigning no number with the operator
       fireEvent.click(button)
-      expect(resultBox).toHaveTextContent('Error: assign more than two numbers for the operator to process')
+      expect(resultBox).toHaveTextContent('Error: assign more than one number for the operator to process')
       expect(button).toHaveTextContent('X')
     }
   }
@@ -199,7 +199,7 @@ test('n number with an operator', () => {
 
         //Check result box
         for (let i of indexes) {
-          expect(resultBox).toHaveTextContent('Error: assign more than two numbers for the operator to process')
+          expect(resultBox).toHaveTextContent('Error: assign more than one number for the operator to process')
         }
       }
     }
